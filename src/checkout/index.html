@@ -1,0 +1,145 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Sleep Outside | Checkout</title>
+    <script src="../js/checkout.js" type="module"></script>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+
+  <body>
+    <header class="divider" id="main-header"></header>
+
+    <main class="divider">
+      <section id="checkout">
+        <h2>Review & Place your Order</h2>
+        <form id="checkout-form">
+          <!-- Customer Information Fieldset -->
+          <fieldset>
+            <legend>Customer Information</legend>
+
+            <!-- First Name and Last Name Row -->
+            <div class="row">
+              <div class="input-group">
+                <label for="first-name"
+                  >First Name <span class="required">*</span></label
+                >
+                <input type="text" id="first-name" name="first-name" required />
+              </div>
+              <div class="input-group">
+                <label for="last-name"
+                  >Last Name <span class="required">*</span></label
+                >
+                <input type="text" id="last-name" name="last-name" required />
+              </div>
+            </div>
+
+            <!-- Street Address Row (Full Width) -->
+            <div class="row">
+              <div class="input-group full-width">
+                <label for="street-address"
+                  >Street Address <span class="required">*</span></label
+                >
+                <input
+                  type="text"
+                  id="street-address"
+                  name="street-address"
+                  required
+                />
+              </div>
+            </div>
+
+            <!-- City, State, and Zip Code Row (Divided into Thirds) -->
+            <div class="row">
+              <div class="input-group">
+                <label for="city">City <span class="required">*</span></label>
+                <input type="text" id="city" name="city" required />
+              </div>
+              <div class="input-group">
+                <label for="state">State <span class="required">*</span></label>
+                <input type="text" id="state" name="state" required />
+              </div>
+              <div class="input-group">
+                <label for="zip-code"
+                  >Zip Code <span class="required">*</span></label
+                >
+                <input type="text" id="zip-code" name="zip-code" required />
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Payment Information Fieldset -->
+          <fieldset>
+            <legend>Payment Information</legend>
+            <div class="row">
+              <div class="input-group">
+                <label for="credit-card"
+                  >Credit Card Number <span class="required">*</span></label
+                >
+                <input
+                  type="text"
+                  id="credit-card"
+                  name="credit-card"
+                  required
+                  pattern="[0-9]{15,16}"
+                  maxlength="16"
+                  placeholder="                XXXX"
+                  title="Credit card number must be 15-16 digits."
+                />
+              </div>
+              <div class="input-group">
+                <label for="exp-date"
+                  >Expiration Date <span class="required">*</span></label
+                >
+                <input
+                  type="text"
+                  id="exp-date"
+                  name="exp-date"
+                  required
+                  maxlength="5"
+                  placeholder="MM/YY"
+                  pattern="(0[1-9]|1[0-2])\/\d{2}"
+                  title="Enter Month/Year format."
+                />
+              </div>
+              <div class="input-group">
+                <label for="cvv"
+                  >Security Code <span class="required">*</span></label
+                >
+                <input
+                  type="text"
+                  id="cvv"
+                  name="cvv"
+                  required
+                  pattern="[0-9]{3,4}"
+                  maxlength="4"
+                  placeholder="XXX"
+                  title="CVV must be 3-4 digits."
+                />
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Order Summary Fieldset -->
+          <fieldset>
+            <legend>Order Summary</legend>
+            <div class="row order-summary">
+              <p id="order-subtotal">Subtotal: $0.00</p>
+              <p id="order-tax">Tax: $0.00</p>
+              <p id="order-shipping">Shipping Estimate: $0.00</p>
+              <p id="order-total">Order Total: $0.00</p>
+            </div>
+          </fieldset>
+
+          <!-- Checkout Button -->
+          <button type="submit">Checkout</button>
+        </form>
+      </section>
+    </main>
+    <footer id="footer"></footer>
+  </body>
+</html>
